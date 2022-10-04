@@ -15,7 +15,7 @@ function delay(t,v){
 */
 
 app.get('/', async (req, res)=>{
-    const [rows] = await pool.query('SELECT * FROM users')
+    const [rows] = await pool.query('SELECT * FROM users1')
     res.json(rows)
 })
 
@@ -68,7 +68,7 @@ app.get('/connection', async(req, res)=>{
 })
 
 app.get('/create', async(req, res)=>{
-    const result = await pool.query('INSERT INTO users(name) VALUES ("Alex")');
+    const result = await pool.query('INSERT INTO users1(name) VALUES ("Alex")');
     res.json(result);
 
 })
